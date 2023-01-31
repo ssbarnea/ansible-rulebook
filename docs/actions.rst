@@ -108,6 +108,12 @@ Run an Ansible module
    * - verbosity
      - Verbosity level when running the module, a value between 1-4
      - No
+   * - var_root
+     - If the event is a deeply nested dictionary, the var_root can specify the key name whose value should replace the matching event value. The var_root can take a dictionary to account for data when we have multiple matching events.
+     - No
+   * - json_mode
+     - Boolean, sends the playbook events data to the stdout as json strings as they are processed by ansible-runner
+     - No
 
 run_job_template
 ****************
