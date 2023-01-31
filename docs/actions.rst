@@ -39,7 +39,10 @@ Run an Ansible playbook.
      - Boolean, the artifacts from the playbook execution are inserted back into the rule set as events
      - No
    * - ruleset
-     - The name of the ruleset to post the event or assert the fact to, default is current rule set.
+     - The name of the ruleset to post the event or assert the fact to, default is current rule set
+     - No
+   * - copy_files 
+     - Boolean, copy the artifact files from the playbook execution
      - No
    * - retry
      - If the playbook fails execution, retry it once, boolean value true|false
@@ -80,6 +83,18 @@ Run an Ansible module
      - Yes
    * - module_args
      - The arguments to pass into the Ansible Module
+     - No
+   * - set_facts
+     - Boolean, the artifacts from the playbook execution are inserted back into the rule set as facts
+     - No
+   * - post_events
+     - Boolean, the artifacts from the playbook execution are inserted back into the rule set as events
+     - No
+   * - ruleset
+     - The name of the ruleset to post the event or assert the fact to, default is current rule set
+     - No
+   * - copy_files 
+     - Boolean, copy the artifact files from the playbook execution
      - No
    * - retry
      - If the module fails execution, retry it once, boolean value true|false. Default false
@@ -122,7 +137,7 @@ Run a job template.
      - The artifacts from the playbook execution are inserted back into the rule set as events
      - No
    * - ruleset
-     - The name of the ruleset to post the event or assert the fact to, default is current rule set.
+     - The name of the ruleset to post the event or assert the fact to, default is current rule set
      - No
    * - retry
      - If the playbook fails execution, retry it once, boolean value true|false
